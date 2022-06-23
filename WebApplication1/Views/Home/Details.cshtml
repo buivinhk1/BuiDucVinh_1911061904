@@ -1,0 +1,26 @@
+﻿@model WebApplication1.Models.Phim
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+<h2>@Html.DisplayFor(model => model.tenphim)</h2>
+<div class="col-sm-12 col=md-12">
+    <div class="thumbnail">
+        @*<img src="~/Content/images/@Model.hinh" alt="thumbnail">*@
+        <p><img src="@Model.hinh" alt="hinh thumnail" /></p>
+
+
+        @*<img src="/@Html.DisplayFor(model=>model.hinh)" alt="thumbnail">*@
+    </div>
+    <div class="caption">
+        <p> @Html.DisplayNameFor(model => model.maphim):@Html.DisplayFor(model => model.maphim)</p>
+        <p> @Html.DisplayNameFor(model => model.daodien):@Html.DisplayFor(model => model.daodien)</p>
+        <p> @Html.DisplayNameFor(model => model.ngaychieu):@Html.DisplayFor(model => model.ngaychieu)</p>
+        <p>
+            <a href="#" class="btn btn-primary" role="button">Buy</a>
+            @Html.ActionLink("Back", "Index", "", new { @class = "btn btn-info" })
+        </p>
+    </div>
+</div>

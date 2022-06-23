@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel panel-heading">
+                    <srong>@item.tenphim</srong>
+                </div>
+                <div class="panel-body">
+                    <p><strong>Đạo Diễn:</strong>@item.daodien</p>
+                    <p><img src="@item.hinh" alt="hinh thumnail"style="width: 100%;"/></p>
+                    <p><strong>Ngày chiêu phim:</strong>@item.ngaychieu</p>
+                </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                        <div class="DatMua">
+                            @if (item.ngaychieu < DateTime.Today)
+                            {
+                                <a class="btn btn-success" style="background-color:green" href="@Url.Action("ThemGioHang","GioHang",new { @id=item.maphim,@strUrl= Request.Url.ToString()})">Đang chiếu</a>
+                                                           
+                            }
+                            else
+                            {
+                                <a class="btn btn-success" style="background-color:orange" href="#">Sắp chiếu</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbQuanLyPhim">
+  <DataContextMoniker Name="/dbQuanLyPhimDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e735d524-7a23-4960-bb90-3747a186bd47" absoluteBounds="6.25, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbQuanLyPhimDataContext/ChiTiet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72d7f523-884c-4f57-b240-589f70d5852c" absoluteBounds="6.265, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0beb5b8e-7966-4dc2-8e59-2510d1ac9d96" absoluteBounds="3.5, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbQuanLyPhimDataContext/HoaDon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="165ab017-cecb-444e-9997-889788cb1a83" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2dfbba94-3050-495a-a9e0-dcbc48252b9b" absoluteBounds="0.75, 4, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/dbQuanLyPhimDataContext/KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91b084fd-d95b-4714-b986-cf91fbf60604" absoluteBounds="0.765, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32f6aa21-6b26-45e0-90d7-95145997dbc9" absoluteBounds="0.75, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dbQuanLyPhimDataContext/Phim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a72eb2aa-dd7e-4990-a5c6-d786bd731722" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88126816-2272-4baa-abc7-89691351e30b" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dbQuanLyPhimDataContext/LichChieu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00480e3d-74e4-41ec-85b9-29b0900eda67" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.94314697265625); (7.25 : 4.94314697265625); (7.25 : 2.6362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQuanLyPhimDataContext/HoaDon/HoaDon_ChiTiet" />
+      <nodes>
+        <classShapeMoniker Id="0beb5b8e-7966-4dc2-8e59-2510d1ac9d96" />
+        <classShapeMoniker Id="e735d524-7a23-4960-bb90-3747a186bd47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.94314697265625); (3.5 : 4.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQuanLyPhimDataContext/KhachHang/KhachHang_HoaDon" />
+      <nodes>
+        <classShapeMoniker Id="2dfbba94-3050-495a-a9e0-dcbc48252b9b" />
+        <classShapeMoniker Id="0beb5b8e-7966-4dc2-8e59-2510d1ac9d96" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.94314697265625); (6.25 : 1.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQuanLyPhimDataContext/LichChieu/LichChieu_ChiTiet" />
+      <nodes>
+        <classShapeMoniker Id="88126816-2272-4baa-abc7-89691351e30b" />
+        <classShapeMoniker Id="e735d524-7a23-4960-bb90-3747a186bd47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.85659912109375); (3.5 : 1.85659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQuanLyPhimDataContext/Phim/Phim_LichChieu" />
+      <nodes>
+        <classShapeMoniker Id="32f6aa21-6b26-45e0-90d7-95145997dbc9" />
+        <classShapeMoniker Id="88126816-2272-4baa-abc7-89691351e30b" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
